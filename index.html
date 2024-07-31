@@ -47,27 +47,72 @@
     </header>
     <main>
       
-      <section class="content-section cover">
-        <div>
-          <h1>
-            <span>оно</span>
-            <span>тебе</span>
-            <span>надо</span>
+      <section class="content-section cover overlay">
+        
+          <h1 class="cover__title">
+            <span class="aligned-text">
+              о
+              <p class="letter-spacing-extended">но</p> 
+            </span>
+            <span class="aligned-text_center aligned-text">
+              те
+              <p class="letter-spacing-extended" >бе</p>
+            </span>
+            <span class="aligned-text_right aligned-text">
+              н
+              <p class="letter-spacing-extended">ад</p>
+              о
+            </span>
           </h1>
-          <p>Аукцион вещей, в которые никто не верил</p>
-          <button>Сделать ставку</button>
-        </div>
-      </section>
+          <p class="cover__description">
+            <span class="cover__description-text">Аукцион вещей, </span>
+            <span class="cover__description-text">в </span>
+            <span class="cover__description-text">которые никто не верил</span>
+          </p>
+          <button class="bet-button">Сделать ставку</button>
+       </section>
       
       <section class="content-section lots">
-        <h2>Лоты</h2>
-        <div>Фильм режиссёра, который бросил киношколу
-        </div>
-        <div>Книга, где описан один скучный день из жизни рекламного агента
-        </div>
-        <div>Картина, которую повторит даже 5-летний сын маминой подруги</div>
-        <a>еще варианты</a>
+
+        <h2 class="lots__heading">Лоты</h2>
+
+        <ul class="lots__card-list">
+          <li class="lots__card-list-item card card_type_film overlay">
+            <h3 class="card__title">
+              <a class="card-link" href="">
+                Фильм режиссёра, который бросил киношколу
+              </a>
+            </h3>
+            <p class="card__text">
+              Не просто бросил, а ушёл с первой лекции. Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?
+            </p>
+          </li>
+          <li class="lots__card-list-item card card_type_book overlay">
+            <h3 class="card__title">
+              <a class="card-link" href="">
+                Книга, где описан один скучный день из жизни рекламного агента
+              </a>
+              </h3>
+            <p class="card__text">
+              Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский. В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная с античных времён. И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса?
+            </p>
+          </li>
+          <li class="lots__card-list-item card card_type_picture overlay">
+            <h3 class="card__title">
+              <a class="card-link" href="">
+                Картина, которую повторит даже 5-летний сын маминой подруги
+              </a>
+            </h3>
+            <p class="card__text">
+              Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на инфузорию-туфельку. Никаких полей, лесов, котиков<span>...</span> Сколько бы вы на такое поставили, если бы не знали, что это — одна из революционных работ Кандинского?
+            </p>
+          </li>
+        </ul>
+        
+        <a class="lots__look-more-link">посмотреть больше</a>
+      
       </section>
+
       <section class="content-section about">
         <img src="" alt="">
         <h2>Об аукционе</h2>

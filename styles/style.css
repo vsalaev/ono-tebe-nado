@@ -27,10 +27,10 @@
     list-style: outside circle;
     padding: 44px 36px 0 0;
 }
-
+/* что бы знакчки было видно, наверняка есть элегантнее решение, гребаный маркер ничего не дал*/
 .header__links-list-item{
-    padding: 0 29px 0 0; /* что бы знакчки было видно, наверняка есть элегантнее решение, гребаный маркер ничего не дал*/
-    }
+    padding: 0 29px 0 0; 
+}
 
 .header__links-list-item:last-child{
 padding: 0;
@@ -49,9 +49,11 @@ padding: 0;
     border-bottom: none;
     }
 
+/* надо бы менять картинку на как в макете, есть отличия*/
+
 .header__logo{
-    justify-self: center; /* надо менять картинку на как в образце, есть отличия*/
- }
+    justify-self: center;  
+}
 
 .header__logo-image{
     display: block;
@@ -76,27 +78,221 @@ padding: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
 
-/* следущая секция*/
+/* секция COVER */
 
 .cover{
+    color:white;
+    background: url(/images/cover.jpg) no-repeat center / cover;
+    height: 757px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 80px 80px;
+
+
+}
+
+/* попытка реализовать полупрозрачныц блок, из уроков не смог, наше решение на DOKA, что огорчает*/
+
+.overlay {
+    position: relative;
+    z-index: 0;
+  }
+  
+.overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+  }
+
+.cover__title {
+    padding:165px 50px 0 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap:20px;
+}
+
+.aligned-text {
+    display: flex;
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 115px;
+    letter-spacing: 0.3em;
+ 
+}
+
+.aligned-text_center{
+    font-weight: 700;
+    line-height: 100px;
+    letter-spacing: 0.3em;
+    justify-content: center;
     
-   background-image: url(/images/cover.jpg);
-   height: 757px;
-
-}
-.cover div{ /* попытка реализовать полупрозрачныц блок, скорее вссего надо длеать грид, а там уже подобрать правильный контейнер для этого*/
-    background-color: hwb(0 0% 100% / 0.5);
-    width: inherit;
-    height: inherit;
-
 }
 
+.aligned-text_center .letter-spacing-extended{
+    line-height: 100px;
+    letter-spacing: 0.6em;
+}
+/*как то не смог без костылей послеюнюю строку осилить, пришлось смещать падингом, что огорчает*/
+.aligned-text_right {
+    font-weight: 700;
+    line-height: 100px;
+    letter-spacing: 0.6em;
+    padding: 0 0 0 585px;
+    right: -60px;
+}
 
-.lots{
-    background-color: rgb(80, 80, 80);
-    padding: 0 24px;
+
+.aligned-text_right .letter-spacing-extended {
+    line-height: 100px;
+    letter-spacing: 0.3em;
+}
+
+.letter-spacing-extended{
+    font-weight: 700;
+    line-height: 115px;
+    letter-spacing: 0.6em;
+}
+
+
+
+
+.cover__description{
+    padding: 12px 0 0 78px;
+}
+
+.cover__description-text{
+    text-transform: uppercase;
+    font-size:22px;
+    line-height: 28px;
+    word-spacing: 0.87em; /*пришлось подбирать*/
+}
+
+/* пришлось изучити усложнить код, коли в макете специально усложнили, мжет к логотипу вернусь тоже*/
+
+.cover__description-text:nth-child(2) {
+    word-spacing: 0.8em;
+}
+
+.cover__description-text:nth-child(3) {
+    word-spacing: 0.83em;
+}
+
+/* --- */
+
+.bet-button{
+    font-size: 22px;
+    line-height: 25.83px;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid white;
+    height: 50px;
+    width: 255px;
+    background-color: #ffffff00;
+    color: white;
+}
+
+
+
+
+/* секция LOTS  */
+
+.lots {
+    padding: 179px 24px 0 24px;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    font-size:20px;
+}
+
+.lots__heading {
+    display: flex;
+    padding: 0 0 26px 40px;
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 48.2px;
+
 
 }
+	
+.lots__card-list {
+    display: flex;
+    gap: 25px;
+}
+    
+.lots__card-list-item {
+    list-style: none;
+    }
+    
+.card-link {
+    text-underline-offset: 3px;
+    }
+    
+.card {
+    flex-basis: 334px;
+    min-height: 563px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    color: white;
+
+
+    }
+    
+.card_type_film {
+    background: url(/images/card-lot-01.jpg) no-repeat center / cover;
+    }
+    
+.card_type_book {
+    background: url(/images/card-lot-02.jpg) no-repeat center / cover;
+    }
+    
+.card_type_picture {
+    background: url(/images/card-lot-03.jpg) no-repeat center / cover;
+    }
+
+    
+.card__title {
+    padding: 51px 40px 0 40px;
+    font-size:22px;
+    line-height: 26px;
+    text-transform: uppercase;
+    }
+    
+.card__text {
+    padding: 0px 40px 48px 40px;
+    line-height: 24px;
+
+    }
+
+.card__text span {
+    font-family: Raleway;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.13em;
+    
+        }
+    
+.lots__look-more-link {
+    display: flex;
+    padding: 30px 0 0 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    }
+
+
+
+
+
+
+
 
 .about{
     display: grid;
