@@ -8,6 +8,7 @@ body {
   width: 1100px;
   margin: 0 auto;
   font-family: Raleway, sans-serif;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 h1,
@@ -30,5 +31,5 @@ a {
 }
 
 img {
-  width: 100%;
+  
 }

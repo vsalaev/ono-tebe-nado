@@ -1,1 +1,116 @@
 /* место для вашего кода */
+.content-section{
+    box-sizing: border-box;
+    width: auto;
+    min-height: 100px;
+    margin: auto;
+}
+
+/* header, логотип должен быть приклеен к верху, нижняя граница авто. сама секция 24 с боков и 92 сверху
+
+478 148 474 это в хедере, за минисум паддинга */
+
+.header{
+    padding: 92px 24px 96px 24px;
+    display: grid;
+    grid-template-columns: 113.5fr  37fr 112.5fr;
+    grid-template-rows: 1fr;
+    font-size: 18px;
+}
+
+.header__menu{
+}
+
+.header__links-list{
+    display: flex;
+    justify-content: end;
+    list-style: outside circle;
+    padding: 44px 36px 0 0;
+}
+
+.header__links-list-item{
+    padding: 0 29px 0 0; /* что бы знакчки было видно, наверняка есть элегантнее решение, гребаный маркер ничего не дал*/
+    }
+
+.header__links-list-item:last-child{
+padding: 0;
+    }
+
+.header__links-list-item_no-bullit{
+        list-style: none;
+    
+    }
+
+.header__link{
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    }
+
+.header__link_active{
+    border-bottom: none;
+    }
+
+.header__logo{
+    justify-self: center; /* надо менять картинку на как в образце, есть отличия*/
+ }
+
+.header__logo-image{
+    display: block;
+    height: 105px;
+
+    }
+
+.address{
+    
+}
+
+
+.header__address{
+    padding: 5px 26px 2px 184px;
+    line-height: 24.3px;
+    font-style: normal;
+    
+}
+
+.header__address a {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+/* следущая секция*/
+
+.cover{
+    
+   background-image: url(/images/cover.jpg);
+   height: 757px;
+
+}
+.cover div{ /* попытка реализовать полупрозрачныц блок, скорее вссего надо длеать грид, а там уже подобрать правильный контейнер для этого*/
+    background-color: hwb(0 0% 100% / 0.5);
+    width: inherit;
+    height: inherit;
+
+}
+
+
+.lots{
+    background-color: rgb(80, 80, 80);
+    padding: 0 24px;
+
+}
+
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: rgb(42, 42, 42);
+    padding: 0 24px;
+
+
+}
+
+.footer{
+    background-color: rgb(53, 53, 53);
+    padding: 0 50px 88px 50px;
+
+}
+
