@@ -1,11 +1,11 @@
-.content-section{
+.content-section {
     box-sizing: border-box;
     width: auto;
     min-height: 100px;
     margin: auto;
 }
 
-.header{
+.header {
     padding: 92px 24px 95px 24px;
     display: grid;
     grid-template-columns: 113.5fr  37fr 112.5fr;
@@ -13,11 +13,11 @@
     font-size: 18px;
 }
 
-.header__menu{
+.header__menu {
     padding: 44px 36px 0 0;
 }
 
-.header__links-list{
+.header__links-list {
     display: flex;
     justify-content: end;
     list-style: outside circle;
@@ -49,15 +49,15 @@
 /* надо бы менять картинку на экспорт макета, есть отличия*/
 
 .header__logo {
-    justify-self: center;  
+    justify-self: center;
 }
 
-.header__logo-image{
+.header__logo-image {
     display: block;
     height: 105px;
 }
 
-.header__address{
+.header__address {
     padding: 6px 26px 2px 184px;
     line-height: 24.4px;
     font-style: normal;
@@ -72,7 +72,7 @@
 
 /* секция */
 
-.cover{
+.cover {
     color:white;
     background: url(/images/cover.jpg) no-repeat center / cover;
     display: flex;
@@ -114,20 +114,18 @@
     font-size: 100px;
     text-transform: uppercase;
     line-height: 115px;
-    letter-spacing: 0.3em;  
- 
+    letter-spacing: 0.3em;
 }
 
-.aligned-text_center{
+.aligned-text_center {
     line-height: 100px;
     letter-spacing: 0.3em;
     justify-content: center;
-    
 }
 
 /*совершенно не очевидный момент, но по принципу конструктора и вложенности можно сверстать и все допущенные моменты в макете*/
 
-.aligned-text_center .letter-spacing-extended{
+.aligned-text_center .letter-spacing-extended {
     line-height: 100px;
     letter-spacing: 0.6em;
 }
@@ -147,18 +145,18 @@
     letter-spacing: 0;
 }
 
-.letter-spacing-extended{
+.letter-spacing-extended {
     line-height: 115px;
     letter-spacing: 0.6em;
 }
 
 /*---*/
 
-.cover__description{
+.cover__description {
     padding: 66px 0 62px 79px;
 }
 
-.cover__description-text{
+.cover__description-text {
     text-transform: uppercase;
     font-size:22px;
     line-height: 28px;
@@ -180,7 +178,7 @@
 
 /* --- */
 
-.bet-button{
+.bet-button {
     align-self: center;
     font-size: 22px;
     line-height: 25.83px;
@@ -277,7 +275,7 @@
 
 /* секция */
 
-.about{
+.about {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 7fr 4fr 4fr;
@@ -363,7 +361,7 @@
 
 }
 
-.footer{
+.footer {
     padding: 180px 50px 88px 50px;
     display: flex;
     flex-direction: row;
@@ -397,7 +395,7 @@
     
 }
 
-.footer__menu-list-item {    
+.footer__menu-list-item {
     list-style: none;
 }
 
