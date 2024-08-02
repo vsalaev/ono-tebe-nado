@@ -11,7 +11,7 @@
 478 148 474 это в хедере, за минисум паддинга */
 
 .header{
-    padding: 92px 24px 96px 24px;
+    padding: 92px 24px 95px 24px;
     display: grid;
     grid-template-columns: 113.5fr  37fr 112.5fr;
     grid-template-rows: 1fr;
@@ -19,15 +19,17 @@
 }
 
 .header__menu{
+    padding: 44px 36px 0 0;
 }
 
 .header__links-list{
     display: flex;
     justify-content: end;
     list-style: outside circle;
-    padding: 44px 36px 0 0;
-}
+   }
+
 /* что бы знакчки было видно, наверняка есть элегантнее решение, гребаный маркер ничего не дал*/
+
 .header__links-list-item{
     padding: 0 29px 0 0; 
 }
@@ -36,20 +38,23 @@
 padding: 0;
     }
 
+
 .header__links-list-item_no-bullit{
-        list-style: none;
-    
+    list-style: none;
     }
 
 .header__link{
     border-bottom: 1px solid rgba(0, 0, 0, 1);
+    letter-spacing: 0.01655em;
+
     }
 
 .header__link_active{
     border-bottom: none;
+    letter-spacing: 0.02em;
     }
 
-/* надо бы менять картинку на как в макете, есть отличия*/
+/* надо бы менять картинку на экспорт макета, есть отличия*/
 
 .header__logo{
     justify-self: center;  
@@ -58,24 +63,19 @@ padding: 0;
 .header__logo-image{
     display: block;
     height: 105px;
-
-    }
-
-.address{
-    
 }
 
-
 .header__address{
-    padding: 5px 26px 2px 184px;
-    line-height: 24.3px;
+    padding: 6px 26px 2px 184px;
+    line-height: 24.4px;
     font-style: normal;
-    
 }
 
 .header__address a {
     text-decoration: none;
     border-bottom: 1px solid rgba(0, 0, 0, 1);
+    letter-spacing: 0.016em;
+    line-height: 23.4px;
 }
 
 /* секция COVER */
@@ -83,16 +83,14 @@ padding: 0;
 .cover{
     color:white;
     background: url(/images/cover.jpg) no-repeat center / cover;
-    height: 757px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 80px 80px;
-
-
+    gap: 80px;
+    font-size:22px;
 }
 
-/* попытка реализовать полупрозрачныц блок, из уроков не смог, наше решение на DOKA, что огорчает*/
+/* реализовать полупрозрачныц блок, из уроков не смог, наше решение на DOKA, что огорчает*/
 
 .overlay {
     position: relative;
@@ -107,98 +105,101 @@ padding: 0;
     z-index: -1;
   }
 
+/*---*/
+
 .cover__title {
-    padding:165px 50px 0 50px;
-    width: 100%;
+    padding: 166px 50px 0 50px;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    gap:20px;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
 }
 
 .aligned-text {
     display: flex;
+    flex-wrap: wrap;
     font-size: 100px;
     text-transform: uppercase;
-    font-weight: 700;
     line-height: 115px;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.3em;  
  
 }
 
 .aligned-text_center{
-    font-weight: 700;
     line-height: 100px;
     letter-spacing: 0.3em;
     justify-content: center;
     
 }
 
+/*совершенно не очевидный момент, но по принципу конструктора и вложенности можно сверстать и все допущенные моменты в макете*/
+
 .aligned-text_center .letter-spacing-extended{
     line-height: 100px;
     letter-spacing: 0.6em;
 }
-/*как то не смог без костылей послеюнюю строку осилить, пришлось смещать падингом, что огорчает*/
+
 .aligned-text_right {
-    font-weight: 700;
     line-height: 100px;
     letter-spacing: 0.6em;
-    padding: 0 0 0 585px;
-    right: -60px;
+    justify-content: right
 }
-
 
 .aligned-text_right .letter-spacing-extended {
     line-height: 100px;
     letter-spacing: 0.3em;
 }
 
+.aligned-text_right span:last-child {
+    letter-spacing: 0;
+}
+
 .letter-spacing-extended{
-    font-weight: 700;
     line-height: 115px;
     letter-spacing: 0.6em;
 }
 
-
-
+/*---*/
 
 .cover__description{
-    padding: 12px 0 0 78px;
+    padding: 66px 0 62px 79px;
 }
 
 .cover__description-text{
     text-transform: uppercase;
     font-size:22px;
     line-height: 28px;
-    word-spacing: 0.87em; /*пришлось подбирать*/
+    word-spacing: 0.859em; /*пришлось подбирать по пикселю*/
+    letter-spacing: -0.0018em;
 }
 
-/* пришлось изучити усложнить код, коли в макете специально усложнили, мжет к логотипу вернусь тоже*/
+/* пришлось усложнить код, коли в макете специально усложнили, мжет к логотипу вернусь тоже*/
 
 .cover__description-text:nth-child(2) {
-    word-spacing: 0.8em;
+    word-spacing: 0.84em;
+    letter-spacing:0em;
 }
 
 .cover__description-text:nth-child(3) {
-    word-spacing: 0.83em;
+    word-spacing: 0.82em;
+    letter-spacing: -0.0001em;
 }
 
 /* --- */
 
 .bet-button{
+    align-self: center;
     font-size: 22px;
     line-height: 25.83px;
     text-transform: uppercase;
     text-align: center;
     border: 1px solid white;
     height: 50px;
-    width: 255px;
+    width: 256px;
     background-color: #ffffff00;
     color: white;
 }
-
-
-
 
 /* секция LOTS  */
 
@@ -218,8 +219,6 @@ padding: 0;
     font-size: 40px;
     text-transform: uppercase;
     line-height: 48.2px;
-
-
 }
 	
 .lots__card-list {
@@ -241,23 +240,20 @@ padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
     color: white;
-
-
-    }
+}
     
 .card_type_film {
     background: url(/images/card-lot-01.jpg) no-repeat center / cover;
-    }
+}
     
 .card_type_book {
     background: url(/images/card-lot-02.jpg) no-repeat center / cover;
-    }
+}
     
 .card_type_picture {
     background: url(/images/card-lot-03.jpg) no-repeat center / cover;
-    }
+}
 
     
 .card__title {
@@ -265,37 +261,29 @@ padding: 0;
     font-size:22px;
     line-height: 26px;
     text-transform: uppercase;
-    }
+}
     
 .card__text {
     padding: 0px 40px 48px 40px;
     line-height: 24px;
 
-    }
+}
 
 .card__text span {
     font-family: Raleway;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.13em;
-    
-        }
+}
     
 .lots__look-more-link {
     display: flex;
     padding: 30px 0 0 40px;
-
 }
 
 .lots__look-more-link p {
         border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
-
-
-
-
-
-
 
 .about{
     display: grid;
@@ -307,8 +295,6 @@ padding: 0;
     "logo title title"
     "logo textd textd"
     "logo textd textd";
-
-
 }
 
 .about__column {
@@ -323,16 +309,16 @@ padding: 0;
     border-radius: 120px;
     margin: 33px 0 0 47px;
 }
+
 .about__logo-image {
-    padding: 64px 45.5px 63px 46.5px;
+    padding: 64px 45px 0 46px;
 }
 
 .about__title {
-    
     grid-area: title;
     text-transform: uppercase;
     font-size: 40px;
-    padding: 135px 0 0 8px;
+    padding: 134px 0 0 9px;
 }
 
 .about__text {
@@ -340,32 +326,49 @@ padding: 0;
     font-size: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 3px 0 0 9px;   
-    letter-spacing: 0.01em;
-}
-
-.about__text span span:first-child {
+    padding: 4px 0 0 9px;
     letter-spacing: 0.0em;
-   
+    word-spacing: 0em;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
-.about__text span span:nth-child(2) {
-    letter-spacing: 0.02em;
+
+.about__text p:first-child {
+    padding-right: 5px;
+    letter-spacing: -0.0047em;
+    word-spacing: 0.08em;
 }
 
-.about__text span span:nth-child(3) {
-letter-spacing: -0.015em;
+
+.about__text p:first-child span:first-child {
+    letter-spacing: 0.00em;
+    word-spacing: 0.01em;
 }
 
-.about__text span span:nth-child(4) {
 
-letter-spacing: 0.03em;
+
+.about__text p:first-child span:nth-child(2) {
+    letter-spacing: 0.001em;
+    word-spacing: 0em;
+}
+
+.about__text p:first-child span:nth-child(3) {
+    letter-spacing: -0.01em;
+    word-spacing: 0em;
+}
+
+.about__text p:first-child span:nth-child(4) {
+    word-spacing: 0em;
+    letter-spacing: 0.03em;
+    color: blue;
 }
     
-.about__text span:nth-child(2) {
+.about__text p:last-child span:nth-child(2) {
     letter-spacing: -0.001em;
-
+    word-spacing: 0em;
+    line-height: 24.2px;
+    color: rgb(255, 0, 43);
     }
 
 .footer{
