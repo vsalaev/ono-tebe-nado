@@ -6,10 +6,10 @@
 }
 
 .header {
-    padding: 92px 24px 95px 24px;
     display: grid;
     grid-template-columns: 113.5fr  37fr 112.5fr;
     grid-template-rows: 1fr;
+    padding: 92px 24px 95px 24px;
     font-size: 18px;
 }
 
@@ -38,7 +38,6 @@
 .header__link {
     border-bottom: 1px solid rgba(0, 0, 0, 1);
     letter-spacing: 0.01655em;
-
 }
 
 .header__link_active {
@@ -59,68 +58,60 @@
 
 .header__address {
     padding: 6px 26px 2px 184px;
-    line-height: 24.4px;
     font-style: normal;
+    line-height: 24.4px;
 }
 
 .header__address a {
-    text-decoration: none;
     border-bottom: 1px solid rgba(0, 0, 0, 1);
-    letter-spacing: 0.016em;
     line-height: 23.4px;
+    letter-spacing: 0.016em;
+    text-decoration: none;
 }
 
 /* секция */
 
 .cover {
-    color:white;
-    background: url(/images/cover.jpg) no-repeat center / cover;
+    position: relative; 
+    z-index: -1;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 80px;
+    color:white;
     font-size:22px;
+    background: url(/images/cover.jpg) no-repeat center / cover; 
 }
 
-/* реализовать полупрозрачныц блок, из уроков не смог, наше решение на DOKA, что огорчает*/
-
 .overlay {
-    position: relative;
-    z-index: 0;
-  }
-  
-.overlay::after {
-    content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: -1;
-  }
-
-/*---*/
+    z-index: -2;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
 .cover__title {
-    padding: 166px 50px 0 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
     gap: 20px;
+    width: 100%;
+    padding: 166px 50px 0 50px;
 }
 
 .aligned-text {
     display: flex;
     flex-wrap: wrap;
     font-size: 100px;
-    text-transform: uppercase;
     line-height: 115px;
     letter-spacing: 0.3em;
+    text-transform: uppercase;
 }
 
 .aligned-text_center {
+    justify-content: center;
     line-height: 100px;
     letter-spacing: 0.3em;
-    justify-content: center;
 }
 
 /*совершенно не очевидный момент, но по принципу конструктора и вложенности можно сверстать и все допущенные моменты в макете*/
@@ -131,9 +122,9 @@
 }
 
 .aligned-text_right {
+    justify-content: right;
     line-height: 100px;
     letter-spacing: 0.6em;
-    justify-content: right
 }
 
 .aligned-text_right .letter-spacing-extended {
@@ -157,49 +148,49 @@
 }
 
 .cover__description-text {
-    text-transform: uppercase;
     font-size:22px;
     line-height: 28px;
-    word-spacing: 0.859em; /*пришлось подбирать по пикселю*/
     letter-spacing: -0.0018em;
+    text-transform: uppercase;
+    word-spacing: 0.859em; /*пришлось подбирать по пикселю*/
 }
 
 /* пришлось усложнить код, коли в макете специально усложнили, мжет к логотипу вернусь тоже*/
 
 .cover__description-text:nth-child(2) {
-    word-spacing: 0.84em;
     letter-spacing:0em;
+    word-spacing: 0.84em;
 }
 
 .cover__description-text:nth-child(3) {
-    word-spacing: 0.82em;
     letter-spacing: -0.0001em;
+    word-spacing: 0.82em;
 }
 
 /* --- */
 
 .bet-button {
     align-self: center;
+    width: 256px;
+    height: 50px;
+    border: 1px solid white;
+    color: white;
     font-size: 22px;
     line-height: 25.83px;
-    text-transform: uppercase;
     text-align: center;
-    border: 1px solid white;
-    height: 50px;
-    width: 256px;
+    text-transform: uppercase;
     background-color: #ffffff00;
-    color: white;
 }
 
 /* секция */
 
 .lots {
-    padding: 179px 24px 0 24px;
     display: flex;
     flex-direction: column;
     min-width: 100%;
     min-height: 100%;
     margin: 0;
+    padding: 179px 24px 0 24px;
     font-size:20px;
 }
 
@@ -207,8 +198,8 @@
     display: flex;
     padding: 0 0 26px 40px;
     font-size: 40px;
-    text-transform: uppercase;
     line-height: 48.2px;
+    text-transform: uppercase;
 }
 	
 .lots__card-list {
@@ -225,12 +216,14 @@
 }
     
 .card {
-    flex-basis: 334px;
-    min-height: 563px;
+    position: relative;
+    z-index: -1;
     display: flex;
     flex-direction: column;
+    flex-basis: 334px;
     justify-content: space-between;
-    color: white;
+    min-height: 563px;
+    color: white; 
 }
     
 .card_type_film {
@@ -279,12 +272,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 7fr 4fr 4fr;
-    padding: 148px 24px 0 24px;
-    min-height: 743px;
     grid-template-areas:
     "logo title title"
     "logo textd textd"
     "logo textd textd";
+    min-height: 743px;
+    padding: 148px 24px 0 24px;
 }
 
 /* не пригодилось
@@ -299,9 +292,9 @@
     grid-area: logo;
     width: 240px;
     height: 240px;
-    background: black;
-    border-radius: 120px;
     margin: 33px 0 0 47px;
+    border-radius: 120px;
+    background: black;
 }
 
 .about__logo-image {
@@ -310,21 +303,21 @@
 
 .about__title {
     grid-area: title;
-    text-transform: uppercase;
-    font-size: 40px;
     padding: 134px 0 0 9px;
+    font-size: 40px;
+    text-transform: uppercase;
 }
 
 .about__text {
-    grid-area: textd;
-    font-size: 20px;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
+    grid-area: textd;
+    justify-content: space-between;
     padding: 4px 0 0 9px;
+    font-size: 20px;
     letter-spacing: 0.0em;
     word-spacing: 0em;
-    flex-wrap: nowrap;
-    justify-content: space-between;
 }
 
 .about__text p:first-child {
@@ -349,37 +342,37 @@
 }
 
 .about__text p:first-child span:nth-child(4) {
-    word-spacing: 0em;
     letter-spacing: 0.03em;
+    word-spacing: 0em;
 
 }
     
 .about__text p:last-child span:nth-child(2) {
+    line-height: 24.2px;
     letter-spacing: -0.001em;
     word-spacing: 0em;
-    line-height: 24.2px;
 
 }
 
 .footer {
-    padding: 180px 50px 88px 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 18px;
     gap:185px;
+    padding: 180px 50px 88px 50px;
+    font-size: 18px;
 
 }
 
 .address {
+    min-width: 240px;
     font-style: normal;
     line-height: 24px;
-    min-width: 240px;
 }
 	
 .address a {
-    text-decoration: none;
     border-bottom: 1px solid rgba(0, 0, 0, 1);
+    text-decoration: none;
 }
 
 .footer__menu {
@@ -408,9 +401,9 @@
 }
 
 .footer__social-list {
-    min-width: 240px;
     display: flex;
     justify-content: space-between;
+    min-width: 240px;
 }
 
 .footer__social-list-item {
