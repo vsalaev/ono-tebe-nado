@@ -284,9 +284,12 @@ padding: 0;
 .lots__look-more-link {
     display: flex;
     padding: 30px 0 0 40px;
-    border-bottom: 1px solid rgba(0, 0, 0, 1);
-    }
 
+}
+
+.lots__look-more-link p {
+        border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
 
 
 
@@ -297,16 +300,127 @@ padding: 0;
 .about{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    background-color: rgb(42, 42, 42);
-    padding: 0 24px;
+    grid-template-rows: 7fr 4fr 4fr;
+    padding: 148px 24px 0 24px;
+    min-height: 743px; /*костылик же... */
+    grid-template-areas:
+    "logo title title"
+    "logo textd textd"
+    "logo textd textd";
 
 
 }
+
+.about__column {
+
+}
+	
+.about__logo {
+    grid-area: logo;
+    width: 240px;
+    height: 240px;
+    background: black;
+    border-radius: 120px;
+    margin: 33px 0 0 47px;
+}
+.about__logo-image {
+    padding: 64px 45.5px 63px 46.5px;
+}
+
+.about__title {
+    
+    grid-area: title;
+    text-transform: uppercase;
+    font-size: 40px;
+    padding: 135px 0 0 8px;
+}
+
+.about__text {
+    grid-area: textd;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3px 0 0 9px;   
+    letter-spacing: 0.01em;
+}
+
+.about__text span span:first-child {
+    letter-spacing: 0.0em;
+   
+}
+
+.about__text span span:nth-child(2) {
+    letter-spacing: 0.02em;
+}
+
+.about__text span span:nth-child(3) {
+letter-spacing: -0.015em;
+}
+
+.about__text span span:nth-child(4) {
+
+letter-spacing: 0.03em;
+}
+    
+.about__text span:nth-child(2) {
+    letter-spacing: -0.001em;
+
+    }
 
 .footer{
-    background-color: rgb(53, 53, 53);
-    padding: 0 50px 88px 50px;
+    padding: 180px 50px 88px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
+    gap:185px;
 
 }
 
+.address {
+    font-style: normal;
+    line-height: 24px;
+    min-width: 240px;
+}
+	
+.address a {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.footer__menu {
+    min-width: 150px;
+} 
+.footer__menu-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.footer__menu-list-item {    
+    list-style: none;
+}
+.footer__menu-link {
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+.footer__menu-link_active {
+    border-bottom: none;
+}
+
+.footer__social-list {
+    min-width: 240px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__social-list-item {
+    list-style: none;
+}
+.footer__social-link {
+    
+}
+.footer__social-icon {
+    width: 48px;
+}
